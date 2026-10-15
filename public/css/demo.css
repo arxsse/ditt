@@ -1,0 +1,396 @@
+/*
+* demo.css
+* File include item demo only specific css only
+******************************************************************************/
+
+.light-style .menu .app-brand.demo {
+    height: 64px;
+}
+
+.dark-style .menu .app-brand.demo {
+    height: 64px;
+}
+
+.app-brand-logo.demo {
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -ms-flexbox;
+    display: flex;
+    width: 40px;
+    height: 40px;
+}
+
+.app-brand-logo.demo2 {
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -ms-flexbox;
+    display: flex;
+    width: 160px;
+    height: 50px;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+.border-lr-4px {
+    border-top-right-radius: .375rem !important;
+    border-bottom-right-radius: .375rem !important;
+}
+
+.border-r-lr-4px {
+    border-right: 1px solid var(--border_input) !important;
+    border-top-right-radius: .375rem !important;
+    border-bottom-right-radius: .375rem !important;
+}
+
+.border-l-lr-4px {
+    border-left: 1px solid var(--border_input) !important;
+    border-top-left-radius: .375rem !important;
+    border-bottom-left-radius: .375rem !important;
+}
+
+.app-brand-logo.demo svg {
+    width: 35px;
+    height: 24px;
+}
+
+.app-brand-text.demo {
+    font-size: 1.375rem;
+}
+
+/* ! For .layout-navbar-fixed added fix padding top tpo .layout-page */
+.layout-navbar-fixed .layout-wrapper:not(.layout-without-menu) .layout-page {
+    padding-top: 64px !important;
+}
+
+.layout-navbar-fixed .layout-wrapper:not(.layout-horizontal):not(.layout-without-menu) .layout-page {
+    padding-top: 78px !important;
+}
+
+/* Navbar page z-index issue solution */
+.content-wrapper .navbar {
+    z-index: auto;
+}
+
+/*
+* Content
+******************************************************************************/
+
+.form-texto {
+    letter-spacing: -.1px;
+    text-align: justify;
+}
+
+.demo-blocks>* {
+    display: block !important;
+}
+
+.demo-inline-spacing>* {
+    margin: 1rem 0.375rem 0 0 !important;
+}
+
+/* ? .demo-vertical-spacing class is used to have vertical margins between elements. To remove margin-top from the first-child, use .demo-only-element class with .demo-vertical-spacing class. For example, we have used this class in forms-input-groups.html file. */
+.demo-vertical-spacing>* {
+    margin-top: .5rem !important;
+    margin-bottom: 0 !important;
+}
+
+.demo-vertical-spacing.demo-only-element> :first-child {
+    margin-top: 0 !important;
+}
+
+.demo-vertical-spacing-lg>* {
+    margin-top: 1.875rem !important;
+    margin-bottom: 0 !important;
+}
+
+.demo-vertical-spacing-lg.demo-only-element> :first-child {
+    margin-top: 0 !important;
+}
+
+.demo-vertical-spacing-xl>* {
+    margin-top: 5rem !important;
+    margin-bottom: 0 !important;
+}
+
+.demo-vertical-spacing-xl.demo-only-element> :first-child {
+    margin-top: 0 !important;
+}
+
+.rtl-only {
+    display: none !important;
+    text-align: left !important;
+    direction: ltr !important;
+}
+
+[dir='rtl'] .rtl-only {
+    display: block !important;
+}
+
+/* Dropdown buttons going out of small screens */
+@media (max-width: 576px) {
+    #dropdown-variation-demo .btn-group .text-truncate {
+        width: 254px;
+        position: relative;
+    }
+
+    #dropdown-variation-demo .btn-group .text-truncate::after {
+        position: absolute;
+        top: 45%;
+        right: 0.65rem;
+    }
+}
+
+/*
+* Layout demo
+******************************************************************************/
+
+.layout-demo-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.layout-demo-placeholder img {
+    width: 900px;
+}
+
+.layout-demo-info {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.dataTables_filter {
+    display: none;
+}
+
+.align_center_left {
+    display: flex;
+    justify-content: initial;
+    align-items: center;
+}
+
+
+/*
+* Carga
+******************************************************************************/
+.loader-wrapper {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: fixed;
+    background-color: #fff;
+    z-index: 1100;
+    top: 0
+}
+
+.loader-wrapper .loader-index {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    -webkit-filter: url("#goo");
+    filter: url("#goo")
+}
+
+.loader-wrapper .loader-index:after {
+    content: "";
+    width: 4em;
+    height: 4em;
+    background: #7366ff;
+    border-radius: 50%;
+    position: absolute;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-animation: grow 2s cubic-bezier(0.14, 0.05, 0.55, 0.5) infinite alternate;
+    animation: grow 2s cubic-bezier(0.14, 0.05, 0.55, 0.5) infinite alternate
+}
+
+.loader-wrapper .loader-index span {
+    width: 2em;
+    height: 2em;
+    background: #f73164;
+    border-radius: 50%;
+    margin-right: 2em;
+    position: relative;
+    -webkit-transform: translateX(7em);
+    transform: translateX(7em);
+    -webkit-animation: move 4s ease-in-out infinite;
+    animation: move 4s ease-in-out infinite
+}
+
+.loader-wrapper .loader-index span:before {
+    content: "";
+    width: 2em;
+    height: 2em;
+    background: #7366ff;
+    border-radius: 50%;
+    position: absolute;
+    left: 3em;
+    -webkit-transform: translateX(0em);
+    transform: translateX(0em);
+    -webkit-animation: shrink 2s ease-in-out infinite;
+    animation: shrink 2s ease-in-out infinite
+}
+
+.loader-wrapper .loader-index span:after {
+    content: "";
+    width: 2em;
+    height: 2em;
+    background: #a927f9;
+    border-radius: 50%;
+    position: absolute;
+    right: 3em;
+    -webkit-transform: translateX(0em);
+    transform: translateX(0em);
+    -webkit-animation: shrink 2s ease-in-out infinite;
+    animation: shrink 2s ease-in-out infinite
+}
+
+.loader-wrapper svg {
+    width: 0;
+    height: 0
+}
+
+.loader-wrapper body {
+    font-family: sans;
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-content: center;
+    background: black
+}
+
+.loader-wrapper h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2em;
+    letter-spacing: 3px;
+    position: relative;
+    z-index: 2
+}
+
+.loader-wrapper h1:before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    background: -webkit-gradient(linear, left top, right top, from(#f73164), color-stop(#7366ff), to(#a927f9));
+    background: linear-gradient(to right, #f73164, #7366ff, #a927f9);
+    color: #fff;
+    top: 2.75em;
+    left: 0.75em;
+    width: 2.5em;
+    font-weight: 400;
+    font-variant: small-caps;
+    font-size: 0.5em
+}
+
+
+@-webkit-keyframes grow {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        background: #a927f9
+    }
+
+    50% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        background: #f73164;
+    }
+}
+
+@keyframes grow {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        background: #a927f9
+    }
+
+    50% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        background: #f73164;
+    }
+}
+
+@-webkit-keyframes move {
+    0% {
+        -webkit-transform: translateX(7em);
+        transform: translateX(7em)
+    }
+
+    50% {
+        -webkit-transform: translateX(-5em);
+        transform: translateX(-5em)
+    }
+}
+
+@keyframes move {
+    0% {
+        -webkit-transform: translateX(7em);
+        transform: translateX(7em)
+    }
+
+    50% {
+        -webkit-transform: translateX(-5em);
+        transform: translateX(-5em)
+    }
+}
+
+@-webkit-keyframes shrink {
+    0% {
+        -webkit-transform: translateX(0em);
+        transform: translateX(0em)
+    }
+
+    50% {
+        -webkit-transform: translateX(-1em);
+        transform: translateX(-1em)
+    }
+}
+
+@keyframes shrink {
+    0% {
+        -webkit-transform: translateX(0em);
+        transform: translateX(0em)
+    }
+
+    50% {
+        -webkit-transform: translateX(-1em);
+        transform: translateX(-1em)
+    }
+}
+
+.close_normal {
+    right: 0 !important;
+    transform: translate(0px, -8px) !important;
+    box-shadow: none !important;
+}

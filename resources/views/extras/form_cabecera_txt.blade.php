@@ -1,0 +1,1 @@
+<small class="text-muted py-2 form-texto">Los campos que contengan un ' * ', son obligatorios y es necesario que se ingrese la informaci&oacute;n correspondiente.</small>

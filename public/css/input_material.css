@@ -1,0 +1,70 @@
+.material input {
+    flex-direction: column;
+}
+
+.material label {
+    position: absolute;
+    text-transform: none;
+    padding: 0px 2px 0px 2px !important;
+    overflow: hidden;
+    margin: 0px;
+    top: 0%;
+    left: 0%;
+    font-size: 14px;
+    -webkit-text-fill-color: #76839a;
+    transform: translate(39px, 9px);
+    height: 15px;
+    width: auto;
+    border-radius: 2px;
+    -webkit-transition: transform .5s, margin .5s ease, font-size .2s ease, -webkit-text-fill-color .4s ease, z-index .5s ease;
+    -moz-transition: transform .5s, margin .5s ease, font-size .2s ease, -webkit-text-fill-color .4s ease, z-index .5s ease;
+    -ms-transition: transform .5s, margin .5s ease, font-size .2s ease, -webkit-text-fill-color .4s ease, z-index .5s ease;
+    -o-transition: transform .5s, margin .5s ease, font-size .2s ease, -webkit-text-fill-color .4s ease, z-index .5s ease;
+    transition: transform .5s, margin .5s ease, font-size .2s ease, -webkit-text-fill-color .4s ease, z-index .5s ease;
+}
+
+
+/*  focus y open los campos */
+.material input:focus~label {
+    transform: translate(-10px, -10px);
+    margin: 0 0px 0 20px;
+    font-size: 12px;
+    background: linear-gradient(to bottom, #ffffff00 60%, #f1f1f9ed 40%);
+    -webkit-text-fill-color: var(--color_principal);
+    z-index: 1;
+}
+
+
+.dark-mode .mrginput100 input:focus~.focus-input100 {
+    background: linear-gradient(to bottom, #ffffff00 60%, #272740 40%);
+}
+
+.mrginput100_form .select2-container--open~.focus-input100 {
+    transform: translate(-10px, -10px);
+    margin: 0 0px 0 20px;
+    font-size: 12px;
+    background: linear-gradient(to bottom, #ffffff00 60%, #f1f1f9ed 40%);
+    -webkit-text-fill-color: var(--color_principal);
+    z-index: 1;
+}
+.dark-mode .mrginput100_form .select2-container--open~.focus-input100 {
+    background: linear-gradient(to bottom, #ffffff00 60%, #272740 40%);
+}
+
+
+/*  cuando tiene lleno los campos */
+.material input:not(:placeholder-shown)+label {
+    transform: translate(-10px, -10px);
+    margin: 0 0px 0 20px;
+    font-size: 12px;
+    background: linear-gradient(to bottom, #ffffff00 60%, #f1f1f9ed 40%);
+    z-index: 1;
+}
+.dark-mode .material input:not(:placeholder-shown)+label {
+    background: linear-gradient(to bottom, #ffffff00 70%, var(--darmode_input) 30%);
+}
+
+
+textarea:focus{
+    border-color: var(--color_principal) !important;
+}
